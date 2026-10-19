@@ -1,0 +1,2601 @@
+{
+ "generated": "2026-10-19",
+ "models": [
+  {
+   "id": "cat-openrouter-gemma-4-26b-a4b",
+   "label": "Gemma 4 26B A4B",
+   "provider": "openai",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "google/gemma-4-26b-a4b-it:free",
+   "key_name": "OpenRouter",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 50,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-openrouter-gemma-4-31b",
+   "label": "Gemma 4 31B",
+   "provider": "openai",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "google/gemma-4-31b-it:free",
+   "key_name": "OpenRouter",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 50,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-openrouter-nemotron-3-nano-30b-a3b",
+   "label": "Nemotron 3 Nano 30B A3B",
+   "provider": "openai",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "nvidia/nemotron-3-nano-30b-a3b:free",
+   "key_name": "OpenRouter",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 50,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-openrouter-nemotron-nano-12b-v2-vl",
+   "label": "Nemotron Nano 12B v2 VL",
+   "provider": "openai",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "nvidia/nemotron-nano-12b-v2-vl:free",
+   "key_name": "OpenRouter",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 50,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-openrouter-nemotron-nano-9b-v2",
+   "label": "Nemotron Nano 9B v2",
+   "provider": "openai",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "nvidia/nemotron-nano-9b-v2:free",
+   "key_name": "OpenRouter",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 50,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-openrouter-gpt-oss-20b",
+   "label": "gpt-oss-20b",
+   "provider": "openai",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "openai/gpt-oss-20b:free",
+   "key_name": "OpenRouter",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 50,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-openrouter-nemotron-3-5-super-vl",
+   "label": "Nemotron 3.5 Super VL",
+   "provider": "openai",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "nvidia/nemotron-3.5-super-vl:free",
+   "key_name": "OpenRouter",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 50,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-openrouter-xing4-0-29b-a4b",
+   "label": "Xing4.0 29B A4B",
+   "provider": "openai",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "xingchen-agi/xing4.0-29b-a4b:free",
+   "key_name": "OpenRouter",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 50,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-3-6-flash",
+   "label": "Gemini 3.6 Flash",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-3.6-flash",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 20,
+    "rpm": 5
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-3-5-flash",
+   "label": "Gemini 3.5 Flash",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-3.5-flash",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 20,
+    "rpm": 5
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-3-flash",
+   "label": "Gemini 3 Flash",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-3-flash",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 20,
+    "rpm": 5
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-3-5-flash-lite",
+   "label": "Gemini 3.5 Flash-Lite",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-3.5-flash-lite",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 500,
+    "rpm": 15
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-3-1-flash-lite",
+   "label": "Gemini 3.1 Flash-Lite",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-3.1-flash-lite",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 500,
+    "rpm": 15
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-2-5-flash",
+   "label": "Gemini 2.5 Flash",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-2.5-flash",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 20,
+    "rpm": 5
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-2-5-flash-lite",
+   "label": "Gemini 2.5 Flash-Lite",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-2.5-flash-lite",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 20,
+    "rpm": 10
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemma-4-31b-instruct",
+   "label": "Gemma 4 31B Instruct",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemma-4-31b-it",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 14400,
+    "rpm": 30
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemma-4-26b-a4b-instruct",
+   "label": "Gemma 4 26B A4B Instruct",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemma-4-26b-a4b-it",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 14400,
+    "rpm": 30
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemma-3-27b-instruct",
+   "label": "Gemma 3 27B Instruct",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemma-3-27b-it",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 14400,
+    "rpm": 30
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemma-3-12b-instruct",
+   "label": "Gemma 3 12B Instruct",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemma-3-12b-it",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 14400,
+    "rpm": 30
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-google-ai-studio-gemma-3-4b-instruct",
+   "label": "Gemma 3 4B Instruct",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemma-3-4b-it",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 14400,
+    "rpm": 30
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemma-3-1b-instruct",
+   "label": "Gemma 3 1B Instruct",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemma-3-1b-it",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 14400,
+    "rpm": 30
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-3-1-flash-tts",
+   "label": "Gemini 3.1 Flash TTS",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-3.1-flash-tts-preview",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "audio"
+   ],
+   "limits": {
+    "rpd": 10,
+    "rpm": 3
+   },
+   "kind": "audio",
+   "priority": 1
+  },
+  {
+   "id": "cat-google-ai-studio-gemini-2-5-flash-tts",
+   "label": "Gemini 2.5 Flash TTS",
+   "provider": "gemini",
+   "base_url": "",
+   "model": "gemini-2.5-flash-preview-tts",
+   "key_name": "Google AI Studio",
+   "tier": "free",
+   "skills": [
+    "audio"
+   ],
+   "limits": {
+    "rpd": 10,
+    "rpm": 3
+   },
+   "kind": "audio",
+   "priority": 2
+  },
+  {
+   "id": "cat-groq-allam-2-7b",
+   "label": "Allam 2 7B",
+   "provider": "openai",
+   "base_url": "https://api.groq.com/openai/v1",
+   "model": "allam-2-7b",
+   "key_name": "Groq",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 7000
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-groq-llama-3-1-8b",
+   "label": "Llama 3.1 8B",
+   "provider": "openai",
+   "base_url": "https://api.groq.com/openai/v1",
+   "model": "llama-3.1-8b-instant",
+   "key_name": "Groq",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 14400
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-groq-llama-3-3-70b",
+   "label": "Llama 3.3 70B",
+   "provider": "openai",
+   "base_url": "https://api.groq.com/openai/v1",
+   "model": "llama-3.3-70b-versatile",
+   "key_name": "Groq",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 1000
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-groq-groq-compound",
+   "label": "Groq Compound",
+   "provider": "openai",
+   "base_url": "https://api.groq.com/openai/v1",
+   "model": "groq/compound",
+   "key_name": "Groq",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 250
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-groq-groq-compound-mini",
+   "label": "Groq Compound Mini",
+   "provider": "openai",
+   "base_url": "https://api.groq.com/openai/v1",
+   "model": "groq/compound-mini",
+   "key_name": "Groq",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 250
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-groq-gpt-oss-120b",
+   "label": "gpt-oss-120b",
+   "provider": "openai",
+   "base_url": "https://api.groq.com/openai/v1",
+   "model": "openai/gpt-oss-120b",
+   "key_name": "Groq",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 1000
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-groq-gpt-oss-20b",
+   "label": "gpt-oss-20b",
+   "provider": "openai",
+   "base_url": "https://api.groq.com/openai/v1",
+   "model": "openai/gpt-oss-20b",
+   "key_name": "Groq",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpd": 1000
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-groq-qwen3-6-27b",
+   "label": "Qwen3.6 27B",
+   "provider": "openai",
+   "base_url": "https://api.groq.com/openai/v1",
+   "model": "qwen/qwen3.6-27b",
+   "key_name": "Groq",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 1000
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cohere-command-a",
+   "label": "Command A",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-a-03-2025",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cohere-command-a-plus",
+   "label": "Command A Plus",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-a-plus-05-2026",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cohere-command-a-reasoning",
+   "label": "Command A Reasoning",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-a-reasoning-08-2025",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cohere-command-a-translate",
+   "label": "Command A Translate",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-a-translate-08-2025",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cohere-command-a-vision",
+   "label": "Command A Vision",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-a-vision-07-2025",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cohere-command-r",
+   "label": "Command R",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-r-08-2024",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cohere-command-r-plus",
+   "label": "Command R+",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-r-plus-08-2024",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cohere-command-r7b",
+   "label": "Command R7B",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-r7b-12-2024",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cohere-command-r7b-arabic",
+   "label": "Command R7B Arabic",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "command-r7b-arabic-02-2025",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cohere-aya-expanse-32b",
+   "label": "Aya Expanse 32B",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "c4ai-aya-expanse-32b",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cohere-aya-vision-32b",
+   "label": "Aya Vision 32B",
+   "provider": "openai",
+   "base_url": "https://api.cohere.ai/compatibility/v1",
+   "model": "c4ai-aya-vision-32b",
+   "key_name": "Cohere",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpmo": 1000,
+    "rpm": 20
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-deepseek-r1-distill-qwen-32b",
+   "label": "deepseek-r1-distill-qwen-32b",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-gemma-4-26b-a4b-it",
+   "label": "gemma-4-26b-a4b-it",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/google/gemma-4-26b-a4b-it",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-gemma-sea-lion-v4-27b-it",
+   "label": "gemma-sea-lion-v4-27b-it",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-glm-4-7-flash",
+   "label": "glm-4.7-flash",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/zai-org/glm-4.7-flash",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-glm-5-2",
+   "label": "glm-5.2",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/zai-org/glm-5.2",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-gpt-oss-120b",
+   "label": "gpt-oss-120b",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/openai/gpt-oss-120b",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-gpt-oss-20b",
+   "label": "gpt-oss-20b",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/openai/gpt-oss-20b",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-granite-4-0-h-micro",
+   "label": "granite-4.0-h-micro",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/ibm-granite/granite-4.0-h-micro",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-kimi-k2-6",
+   "label": "kimi-k2.6",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/moonshotai/kimi-k2.6",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-kimi-k2-7-code",
+   "label": "kimi-k2.7-code",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/moonshotai/kimi-k2.7-code",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "code",
+    "text"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-llama-3-1-8b-instruct-fp8",
+   "label": "llama-3.1-8b-instruct-fp8",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/meta/llama-3.1-8b-instruct-fp8",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-llama-3-2-11b-vision-instruct",
+   "label": "llama-3.2-11b-vision-instruct",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/meta/llama-3.2-11b-vision-instruct",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-llama-3-2-1b-instruct",
+   "label": "llama-3.2-1b-instruct",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/meta/llama-3.2-1b-instruct",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-llama-3-2-3b-instruct",
+   "label": "llama-3.2-3b-instruct",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/meta/llama-3.2-3b-instruct",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-llama-3-3-70b-instruct-fp8-fast",
+   "label": "llama-3.3-70b-instruct-fp8-fast",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-llama-4-scout-17b-16e-instruct",
+   "label": "llama-4-scout-17b-16e-instruct",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/meta/llama-4-scout-17b-16e-instruct",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-mistral-small-3-1-24b-instruct",
+   "label": "mistral-small-3.1-24b-instruct",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/mistralai/mistral-small-3.1-24b-instruct",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-nemotron-3-120b-a12b",
+   "label": "nemotron-3-120b-a12b",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/nvidia/nemotron-3-120b-a12b",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-qwen2-5-coder-32b-instruct",
+   "label": "qwen2.5-coder-32b-instruct",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/qwen/qwen2.5-coder-32b-instruct",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "code"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-qwen3-30b-a3b-fp8",
+   "label": "qwen3-30b-a3b-fp8",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-qwq-32b",
+   "label": "qwq-32b",
+   "provider": "openai",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/v1",
+   "model": "@cf/qwen/qwq-32b",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-aura-1",
+   "label": "aura-1",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/deepgram/aura-1",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "audio"
+   ],
+   "limits": {},
+   "kind": "audio",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-aura-2-en",
+   "label": "aura-2-en",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/deepgram/aura-2-en",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "audio"
+   ],
+   "limits": {},
+   "kind": "audio",
+   "priority": 2
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-aura-2-es",
+   "label": "aura-2-es",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/deepgram/aura-2-es",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "audio"
+   ],
+   "limits": {},
+   "kind": "audio",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-melotts",
+   "label": "melotts",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/myshell-ai/melotts",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "audio"
+   ],
+   "limits": {},
+   "kind": "audio",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-dreamshaper-8-lcm",
+   "label": "dreamshaper-8-lcm",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/lykon/dreamshaper-8-lcm",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "images",
+    "design"
+   ],
+   "limits": {},
+   "kind": "image",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-flux-1-schnell",
+   "label": "flux-1-schnell",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/black-forest-labs/flux-1-schnell",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "images",
+    "design"
+   ],
+   "limits": {},
+   "kind": "image",
+   "priority": 1
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-lucid-origin",
+   "label": "lucid-origin",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/leonardo/lucid-origin",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "images",
+    "design"
+   ],
+   "limits": {},
+   "kind": "image",
+   "priority": 2
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-phoenix-1-0",
+   "label": "phoenix-1.0",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/leonardo/phoenix-1.0",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "images",
+    "design"
+   ],
+   "limits": {},
+   "kind": "image",
+   "priority": 2
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-stable-diffusion-xl-base-1-0",
+   "label": "stable-diffusion-xl-base-1.0",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/stabilityai/stable-diffusion-xl-base-1.0",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "images",
+    "design"
+   ],
+   "limits": {},
+   "kind": "image",
+   "priority": 3
+  },
+  {
+   "id": "cat-cloudflare-workers-ai-stable-diffusion-xl-lightning",
+   "label": "stable-diffusion-xl-lightning",
+   "provider": "cloudflare",
+   "base_url": "https://api.cloudflare.com/client/v4/accounts/{account}/ai/run",
+   "model": "@cf/bytedance/stable-diffusion-xl-lightning",
+   "key_name": "Cloudflare Workers AI",
+   "tier": "free",
+   "skills": [
+    "images",
+    "design"
+   ],
+   "limits": {},
+   "kind": "image",
+   "priority": 3
+  },
+  {
+   "id": "cat-cerebras-gpt-oss-120b",
+   "label": "gpt-oss-120b",
+   "provider": "openai",
+   "base_url": "https://api.cerebras.ai/v1",
+   "model": "gpt-oss-120b",
+   "key_name": "Cerebras",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "tpd": 1000000,
+    "rpm": 5
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-cerebras-glm-4-7",
+   "label": "GLM 4.7",
+   "provider": "openai",
+   "base_url": "https://api.cerebras.ai/v1",
+   "model": "zai-glm-4.7",
+   "key_name": "Cerebras",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "tpd": 1000000,
+    "rpm": 5
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-cerebras-gemma-4-31b",
+   "label": "Gemma 4 31B",
+   "provider": "openai",
+   "base_url": "https://api.cerebras.ai/v1",
+   "model": "gemma-4-31b",
+   "key_name": "Cerebras",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "tpd": 1000000,
+    "rpm": 5
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-mistral-mistral-medium-3-5",
+   "label": "Mistral Medium 3.5",
+   "provider": "openai",
+   "base_url": "https://api.mistral.ai/v1",
+   "model": "mistral-medium-latest",
+   "key_name": "Mistral",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-mistral-mistral-small-4",
+   "label": "Mistral Small 4",
+   "provider": "openai",
+   "base_url": "https://api.mistral.ai/v1",
+   "model": "mistral-small-latest",
+   "key_name": "Mistral",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-mistral-mistral-large-4",
+   "label": "Mistral Large 4",
+   "provider": "openai",
+   "base_url": "https://api.mistral.ai/v1",
+   "model": "mistral-large-latest",
+   "key_name": "Mistral",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-mistral-codestral-codestral",
+   "label": "Codestral",
+   "provider": "openai",
+   "base_url": "https://codestral.mistral.ai/v1",
+   "model": "codestral-latest",
+   "key_name": "Mistral Codestral",
+   "tier": "free",
+   "skills": [
+    "code"
+   ],
+   "limits": {
+    "rpd": 2000,
+    "rpm": 30
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-nvidia-nim-nemotron-3-5-super-vl-120b-a12b",
+   "label": "nemotron-3.5-super-vl-120b-a12b",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-nvidia-nim-deepseek-v4-1-flash",
+   "label": "deepseek-v4.1-flash",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "deepseek-ai/deepseek-v4.1-flash",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-nvidia-nim-nemotron-3-5-lightning-30b-a3b",
+   "label": "nemotron-3.5-lightning-30b-a3b",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-nvidia-nim-muse-glimmer-30b",
+   "label": "muse-glimmer-30b",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "meta/muse-glimmer-30b",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-nvidia-nim-laguna-xs-2-1",
+   "label": "laguna-xs-2.1",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "poolside/laguna-xs-2.1",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "code"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-nvidia-nim-nemotron-3-ultra-550b-a55b",
+   "label": "nemotron-3-ultra-550b-a55b",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-nvidia-nim-nemotron-3-nano-omni-30b-a3b-reasoning",
+   "label": "nemotron-3-nano-omni-30b-a3b-reasoning",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-nvidia-nim-gemma-4-31b-it",
+   "label": "gemma-4-31b-it",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "google/gemma-4-31b-it",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-nvidia-nim-nemotron-3-super-120b-a12b",
+   "label": "nemotron-3-super-120b-a12b",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "nvidia/nemotron-3-super-120b-a12b",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-nvidia-nim-gpt-oss-20b",
+   "label": "gpt-oss-20b",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "openai/gpt-oss-20b",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-nvidia-nim-llama-3-2-11b-vision-instruct",
+   "label": "llama-3.2-11b-vision-instruct",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "meta/llama-3.2-11b-vision-instruct",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-nvidia-nim-llama-3-2-90b-vision-instruct",
+   "label": "llama-3.2-90b-vision-instruct",
+   "provider": "openai",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "model": "meta/llama-3.2-90b-vision-instruct",
+   "key_name": "NVIDIA NIM",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {
+    "rpm": 40
+   },
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-github-models-deepseek-r1",
+   "label": "DeepSeek-R1",
+   "provider": "openai",
+   "base_url": "https://models.github.ai/inference",
+   "model": "deepseek/deepseek-r1",
+   "key_name": "GitHub Models",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 8
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-github-models-deepseek-r1-0528",
+   "label": "DeepSeek-R1-0528",
+   "provider": "openai",
+   "base_url": "https://models.github.ai/inference",
+   "model": "deepseek/deepseek-r1-0528",
+   "key_name": "GitHub Models",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 8
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-github-models-mai-ds-r1",
+   "label": "MAI-DS-R1",
+   "provider": "openai",
+   "base_url": "https://models.github.ai/inference",
+   "model": "microsoft/mai-ds-r1",
+   "key_name": "GitHub Models",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 8
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-github-models-grok-3",
+   "label": "Grok 3",
+   "provider": "openai",
+   "base_url": "https://models.github.ai/inference",
+   "model": "xai/grok-3",
+   "key_name": "GitHub Models",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 15
+   },
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-github-models-grok-3-mini",
+   "label": "Grok 3 Mini",
+   "provider": "openai",
+   "base_url": "https://models.github.ai/inference",
+   "model": "xai/grok-3-mini",
+   "key_name": "GitHub Models",
+   "tier": "free",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {
+    "rpd": 30
+   },
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-scaleway-gemma-3-27b-instruct",
+   "label": "Gemma 3 27B Instruct",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "gemma-3-27b-it",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-scaleway-llama-3-3-70b-instruct",
+   "label": "Llama 3.3 70B Instruct",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "llama-3.3-70b-instruct",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-scaleway-pixtral-12b",
+   "label": "Pixtral 12B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "pixtral-12b-2409",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-scaleway-devstral-2-123b",
+   "label": "Devstral 2 123B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "devstral-2-123b-instruct-2512",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "code"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-scaleway-gemma-4-26b-a4b",
+   "label": "Gemma 4 26B A4B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "gemma-4-26b-a4b-it",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-scaleway-glm-5-2",
+   "label": "GLM 5.2",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "glm-5.2",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-scaleway-gpt-oss-120b",
+   "label": "gpt-oss-120b",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "gpt-oss-120b",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-scaleway-holo2-30b-a3b",
+   "label": "Holo2 30B A3B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "holo2-30b-a3b",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-scaleway-mistral-medium-3-5",
+   "label": "Mistral Medium 3.5",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "mistral-medium-3.5-128b",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-scaleway-mistral-small-3-2-24b",
+   "label": "Mistral Small 3.2 24B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "mistral-small-3.2-24b-instruct-2506",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-scaleway-qwen3-235b-a22b",
+   "label": "Qwen3 235B A22B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "qwen3-235b-a22b-instruct-2507",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-scaleway-qwen3-coder-30b-a3b",
+   "label": "Qwen3 Coder 30B A3B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "qwen3-coder-30b-a3b-instruct",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "code"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-scaleway-qwen3-5-397b-a17b",
+   "label": "Qwen3.5 397B A17B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "qwen3.5-397b-a17b",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-scaleway-qwen3-6-35b-a3b",
+   "label": "Qwen3.6 35B A3B",
+   "provider": "openai",
+   "base_url": "https://api.scaleway.ai/v1",
+   "model": "qwen3.6-35b-a3b",
+   "key_name": "Scaleway",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-sambanova-deepseek-v3-1",
+   "label": "DeepSeek V3.1",
+   "provider": "openai",
+   "base_url": "https://api.sambanova.ai/v1",
+   "model": "DeepSeek-V3.1",
+   "key_name": "SambaNova",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-sambanova-deepseek-v3-2",
+   "label": "DeepSeek V3.2",
+   "provider": "openai",
+   "base_url": "https://api.sambanova.ai/v1",
+   "model": "DeepSeek-V3.2",
+   "key_name": "SambaNova",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-sambanova-gemma-4-31b",
+   "label": "Gemma 4 31B",
+   "provider": "openai",
+   "base_url": "https://api.sambanova.ai/v1",
+   "model": "gemma-4-31b-it",
+   "key_name": "SambaNova",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-sambanova-gpt-oss-120b",
+   "label": "gpt-oss-120b",
+   "provider": "openai",
+   "base_url": "https://api.sambanova.ai/v1",
+   "model": "gpt-oss-120b",
+   "key_name": "SambaNova",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-sambanova-llama-3-3-70b-instruct",
+   "label": "Llama 3.3 70B Instruct",
+   "provider": "openai",
+   "base_url": "https://api.sambanova.ai/v1",
+   "model": "Meta-Llama-3.3-70B-Instruct",
+   "key_name": "SambaNova",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-sambanova-minimax-m2-7",
+   "label": "MiniMax M2.7",
+   "provider": "openai",
+   "base_url": "https://api.sambanova.ai/v1",
+   "model": "MiniMax-M2.7",
+   "key_name": "SambaNova",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-hyperbolic-deepseek-v3-0324",
+   "label": "DeepSeek V3 0324",
+   "provider": "openai",
+   "base_url": "https://api.hyperbolic.xyz/v1",
+   "model": "deepseek-ai/DeepSeek-V3-0324",
+   "key_name": "Hyperbolic",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-hyperbolic-llama-3-3-70b-instruct",
+   "label": "Llama 3.3 70B Instruct",
+   "provider": "openai",
+   "base_url": "https://api.hyperbolic.xyz/v1",
+   "model": "meta-llama/Llama-3.3-70B-Instruct",
+   "key_name": "Hyperbolic",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-hyperbolic-deepseek-r1-0528",
+   "label": "DeepSeek R1 0528",
+   "provider": "openai",
+   "base_url": "https://api.hyperbolic.xyz/v1",
+   "model": "deepseek-ai/DeepSeek-R1-0528",
+   "key_name": "Hyperbolic",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-hyperbolic-qwen3-coder-480b-a35b",
+   "label": "Qwen3 Coder 480B A35B",
+   "provider": "openai",
+   "base_url": "https://api.hyperbolic.xyz/v1",
+   "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+   "key_name": "Hyperbolic",
+   "tier": "trial",
+   "skills": [
+    "code"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-ai21-jamba-large",
+   "label": "Jamba Large",
+   "provider": "openai",
+   "base_url": "https://api.ai21.com/studio/v1",
+   "model": "jamba-large",
+   "key_name": "AI21",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-ai21-jamba-mini",
+   "label": "Jamba Mini",
+   "provider": "openai",
+   "base_url": "https://api.ai21.com/studio/v1",
+   "model": "jamba-mini",
+   "key_name": "AI21",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-upstage-solar-pro",
+   "label": "Solar Pro",
+   "provider": "openai",
+   "base_url": "https://api.upstage.ai/v1",
+   "model": "solar-pro",
+   "key_name": "Upstage",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing",
+    "code",
+    "finance",
+    "sheets"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 1
+  },
+  {
+   "id": "cat-upstage-solar-mini",
+   "label": "Solar Mini",
+   "provider": "openai",
+   "base_url": "https://api.upstage.ai/v1",
+   "model": "solar-mini",
+   "key_name": "Upstage",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 3
+  },
+  {
+   "id": "cat-alibaba-model-studio-qwen-max",
+   "label": "Qwen Max",
+   "provider": "openai",
+   "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+   "model": "qwen-max",
+   "key_name": "Alibaba Model Studio",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-alibaba-model-studio-qwen-plus",
+   "label": "Qwen Plus",
+   "provider": "openai",
+   "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+   "model": "qwen-plus",
+   "key_name": "Alibaba Model Studio",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-alibaba-model-studio-qwen-flash",
+   "label": "Qwen Flash",
+   "provider": "openai",
+   "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+   "model": "qwen-flash",
+   "key_name": "Alibaba Model Studio",
+   "tier": "trial",
+   "skills": [
+    "text",
+    "docs",
+    "scripts",
+    "marketing"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  },
+  {
+   "id": "cat-alibaba-model-studio-qwen-coder",
+   "label": "Qwen Coder",
+   "provider": "openai",
+   "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+   "model": "qwen3-coder-plus",
+   "key_name": "Alibaba Model Studio",
+   "tier": "trial",
+   "skills": [
+    "code"
+   ],
+   "limits": {},
+   "kind": "chat",
+   "priority": 2
+  }
+ ]
+}

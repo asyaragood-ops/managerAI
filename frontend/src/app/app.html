@@ -1,0 +1,54 @@
+@if (auth.state() === 'auth') {
+<header class="topbar glass">
+  <a class="brand" routerLink="/chat" aria-label="infinityAI — на главную">
+    <span class="logo">∞</span>
+    <span class="bname">infinity<b class="grad-text">AI</b></span>
+  </a>
+
+  <nav class="nav" aria-label="Разделы">
+    @for (item of nav; track item.path) {
+      <a class="nl" [routerLink]="item.path" routerLinkActive="on" #rla="routerLinkActive" [attr.aria-current]="rla.isActive ? 'page' : null">
+        <app-icon [name]="item.icon" />
+        <span>{{ item.label }}</span>
+      </a>
+    }
+  </nav>
+
+  @if (models; as m) {
+    <a class="router-pill glass" routerLink="/models" title="Состояние умного роутера">
+      <app-icon name="route" />
+      <b>Умный роутер</b>
+      <i class="dot" [class.warn]="m.activeCount() === 0"></i>
+      <span class="muted">Готово {{ m.activeCount() }} из {{ m.withKeyCount() }} с ключом</span>
+    </a>
+  }
+
+  <div class="seg theme" role="group" aria-label="Тема оформления">
+    <button type="button" [class.on]="theme.theme() === 'light'" (click)="theme.set('light')" [attr.aria-pressed]="theme.theme() === 'light'">
+      <app-icon name="sun" /><span>Светлая</span>
+    </button>
+    <button type="button" [class.on]="theme.theme() === 'dark'" (click)="theme.set('dark')" [attr.aria-pressed]="theme.theme() === 'dark'">
+      <app-icon name="moon" /><span>Тёмная</span>
+    </button>
+  </div>
+
+  <div class="user-anchor">
+    <button type="button" class="user glass" (click)="toggleMenu($event)" [attr.aria-expanded]="menuOpen()" aria-haspopup="menu" title="Аккаунт">
+      <span class="av sm grad">{{ (auth.user()?.login ?? '?')[0].toUpperCase() }}</span>
+      <span class="uname">{{ auth.user()?.login }}</span>
+    </button>
+    @if (menuOpen()) {
+      <div class="menu" role="menu" (click)="$event.stopPropagation()">
+        <div class="mhead"><small class="muted">Вы вошли как</small><b>{{ auth.user()?.login }}</b></div>
+        <a class="mi" role="menuitem" routerLink="/stats" (click)="menuOpen.set(false)"><app-icon name="stats" />Статистика</a>
+        <a class="mi" role="menuitem" routerLink="/settings" (click)="menuOpen.set(false)"><app-icon name="key" />Мои API-ключи</a>
+        <button type="button" class="mi danger" role="menuitem" (click)="auth.logout()"><app-icon name="logout" />Выйти</button>
+      </div>
+    }
+  </div>
+</header>
+}
+
+<main class="page" [class.bare]="auth.state() !== 'auth'">
+  <router-outlet />
+</main>

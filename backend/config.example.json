@@ -1,0 +1,94 @@
+{
+  "catalog_path": "catalog.json",
+  "host": "127.0.0.1",
+  "port": 8080,
+  "db_path": "data/infinity.db",
+  "timeout_ms": 60000,
+  "max_history": 20,
+  "cors_origin": "http://localhost:4200",
+  "allow_registration": true,
+  "env_keys": "owner",
+  "cookie_secure": false,
+  "system_prompt": "Ты — полезный ассистент. Отвечай на языке пользователя.",
+
+  "cascade": [
+    {
+      "id": "cat-google-ai-studio-gemini-2-5-flash",
+      "label": "Gemini",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "key_name": "Google AI Studio",
+      "api_key_env": "GEMINI_API_KEY",
+      "tier": "free",
+      "skills": ["text", "code", "docs", "scripts", "marketing", "finance", "sheets"],
+      "limits": { "rpm": 5, "rpd": 20 },
+      "max_tokens": 4096
+    },
+    {
+      "id": "cat-groq-llama-3-3-70b",
+      "label": "Llama 3.3 70B",
+      "provider": "openai",
+      "base_url": "https://api.groq.com/openai/v1",
+      "model": "llama-3.3-70b-versatile",
+      "key_name": "Groq",
+      "api_key_env": "GROQ_API_KEY",
+      "tier": "free",
+      "limits": { "rpd": 1000 },
+      "max_tokens": 4096
+    },
+    {
+      "id": "openai-gpt-4o", "priority": 1,
+      "label": "GPT-4o",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "key_name": "OpenAI",
+      "api_key_env": "OPENAI_API_KEY",
+      "tier": "paid",
+      "max_tokens": 4096
+    },
+    {
+      "id": "anthropic-claude-sonnet", "priority": 1,
+      "label": "Claude Sonnet",
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "key_name": "Anthropic",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "tier": "paid",
+      "max_tokens": 4096
+    },
+    {
+      "id": "pollinations-flux",
+      "label": "FLUX (Pollinations)",
+      "provider": "pollinations",
+      "kind": "image",
+      "model": "flux",
+      "keyless": true,
+      "tier": "free",
+      "priority": 3,
+      "skills": ["images", "design"],
+      "limits": { "rpm": 4 }
+    },
+    {
+      "id": "gemini-image",
+      "label": "Gemini Image",
+      "provider": "gemini",
+      "kind": "image",
+      "model": "gemini-2.5-flash-image",
+      "key_name": "Google AI Studio",
+      "tier": "paid",
+      "priority": 1,
+      "skills": ["images", "design"]
+    },
+    {
+      "id": "veo",
+      "label": "Veo 3.1",
+      "provider": "gemini",
+      "kind": "video",
+      "model": "veo-3.1-generate-preview",
+      "key_name": "Google AI Studio",
+      "tier": "paid",
+      "priority": 1,
+      "skills": ["video"]
+    }
+  ]
+}

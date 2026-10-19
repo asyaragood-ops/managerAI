@@ -1,0 +1,156 @@
+<div class="chatwrap">
+  <aside class="chatlist glass" [class.open]="listOpen()">
+    <button type="button" class="btn primary block" (click)="newChat()"><app-icon name="plus" />Новый чат</button>
+    <label class="search glass">
+      <app-icon name="search" />
+      <span class="sr-only">Поиск по чатам</span>
+      <input type="search" placeholder="Поиск по чатам" [value]="search()" (input)="search.set($any($event.target).value)" />
+    </label>
+    <div class="cl-scroll">
+      @for (g of groups(); track g.title) {
+        <div class="cl-g">{{ g.title }}</div>
+        @for (it of g.items; track it.c.id) {
+          <div class="ci" [class.on]="it.c.id === chats.activeId()" (click)="select(it.c.id)" (keydown.enter)="select(it.c.id)" tabindex="0" role="button">
+            <b>{{ it.c.title }}</b>
+            <small><span>{{ it.model }}</span><span>{{ it.when }}</span></small>
+            <button type="button" class="ib del" (click)="removeChat(it.c.id, $event)" aria-label="Удалить чат"><app-icon name="trash" /></button>
+          </div>
+        }
+      } @empty {
+        <p class="muted none">Чатов пока нет</p>
+      }
+    </div>
+  </aside>
+  @if (listOpen()) { <div class="scrim" (click)="listOpen.set(false)"></div> }
+
+  <section class="conv">
+    @let chat = chats.active();
+    <header class="conv-h">
+      <button type="button" class="ib list-btn" (click)="listOpen.set(true)" aria-label="Список чатов"><app-icon name="menu" /></button>
+      <div class="ttl">
+        <b>{{ chat?.title ?? 'Новый чат' }}</b>
+        <small>{{ chat ? chat.messages.length : 0 }} сообщений{{ chat && chat.skill ? ' · специализация: ' + skillLabel(chat.skill) : '' }}</small>
+      </div>
+      <app-model-picker [value]="chat?.mode ?? 'auto'" [skill]="chat?.skill ?? null" [autoModel]="autoName()" (changed)="setMode($event)" />
+    </header>
+
+    <div class="msgs" #scroller>
+      <div class="msgs-in">
+        @if (!chat || !chat.messages.length) {
+          <div class="hero">
+            <span class="logo-xl">∞</span>
+            <h2>Чем помочь?</h2>
+            <p class="muted">Выберите специализацию — роутер подберёт модель и переключится на другую, если у текущей закончится лимит.</p>
+            <div class="sugg">
+              @for (s of suggestions; track s.text) {
+                <button type="button" class="glass" (click)="useSuggestion(s)"><span class="tag">{{ skillLabel(s.skill) }}</span>{{ s.text }}</button>
+              }
+            </div>
+          </div>
+        } @else {
+          @for (m of chat.messages; track m.id) {
+            @switch (m.role) {
+              @case ('user') {
+                <div class="msg me"><div class="bub">{{ m.text }}</div></div>
+              }
+              @case ('switch') {
+                <div class="switch">
+                  <app-icon name="bolt" />
+                  @let fromName = m.fromLabel ?? models.get(m.fromModelId)?.name ?? 'модели';
+                  @let toName = m.modelLabel ?? models.get(m.modelId)?.name ?? 'другую модель';
+                  @if (m.limit === false) {
+                    <span><b>{{ fromName }}</b> недоступна → роутер переключил на <b>{{ toName }}</b></span>
+                  } @else {
+                    <span>Лимит <b>{{ fromName }}</b> исчерпан → роутер переключил на <b>{{ toName }}</b></span>
+                  }
+                </div>
+              }
+              @default {
+                @let am = models.get(m.modelId);
+                @let name = m.modelLabel ?? am?.name ?? 'infinityAI';
+                <div class="msg ai">
+                  <span class="av sm" [style.--c]="am?.color ?? '#8b5cf6'">{{ name[0] }}</span>
+                  <div class="bub glass">
+                    <div class="mh">
+                      @if (m.badge) {
+                        <span class="badge" [class.demo]="m.demo" [title]="m.demo ? 'Бэкенд не запущен — демо-ответ' : 'Модель, которая ответила'">{{ m.badge }}</span>
+                      } @else {
+                        <b>{{ name }}</b>
+                      }
+                      <small>{{ timeLabel(m.at) }}</small>
+                    </div>
+                    @if (m.text) { <div class="md" [innerHTML]="m.text | md"></div> }
+                    @if (m.media; as media) {
+                      <figure class="media" [class]="media.kind">
+                        @if (broken().has(m.id)) {
+                          <div class="gone"><app-icon name="alert" />Файл недоступен — бэкенд не запущен или файл удалён из backend/data/media</div>
+                        } @else {
+                          @switch (media.kind) {
+                            @case ('image') {
+                              <a [href]="media.url" target="_blank" rel="noopener" title="Открыть в полном размере">
+                                <img [src]="media.url" [alt]="media.prompt || 'Сгенерированное изображение'" loading="lazy" (error)="markBroken(m.id)" />
+                              </a>
+                            }
+                            @case ('audio') { <audio controls preload="metadata" [src]="media.url" (error)="markBroken(m.id)"></audio> }
+                            @case ('video') { <video controls playsinline preload="metadata" [src]="media.url" (error)="markBroken(m.id)"></video> }
+                          }
+                        }
+                        <figcaption>
+                          <span class="by">{{ mediaWord[media.kind] }} · {{ name }}</span>
+                          <a class="dl" [href]="media.url" [attr.download]="'infinityAI-' + m.id + '.' + ext(media.mime)">Скачать</a>
+                        </figcaption>
+                        @if (media.prompt) {
+                          <details class="prompt">
+                            <summary>{{ media.kind === 'audio' ? 'Текст озвучки' : 'Промпт' }}</summary>
+                            <p>{{ media.prompt }}</p>
+                            @if (media.promptBy) { <small>подготовила модель {{ media.promptBy }}</small> }
+                          </details>
+                        }
+                      </figure>
+                    }
+                  </div>
+                </div>
+              }
+            }
+          }
+          @if (chats.typing()) {
+            <div class="msg ai">
+              <span class="av sm" [style.--c]="nextModel()?.color ?? '#8b5cf6'">{{ nextModel()?.name?.[0] ?? '∞' }}</span>
+              <div class="bub glass typing" aria-label="Модель печатает"><i></i><i></i><i></i></div>
+            </div>
+            @if (models.now() - chats.typingSince() > 10000) {
+              <p class="slow">Картинки и озвучка готовятся до минуты, видео — до нескольких минут…</p>
+            }
+          }
+        }
+      </div>
+    </div>
+
+    <form class="composer glass" (submit)="$event.preventDefault(); send()">
+      <textarea #input rows="1" placeholder="Напишите сообщение…  (Enter — отправить, Shift+Enter — новая строка)"
+                [value]="draft()" (input)="draft.set(input.value); autosize(input)" (keydown)="onKey($event)" aria-label="Сообщение"></textarea>
+      <div class="cmp-b">
+        <button type="button" class="ib" title="Прикрепить файл (скоро)" aria-label="Прикрепить файл"><app-icon name="clip" /></button>
+        <label class="skill-sel chip sm" [class.on]="!!chat?.skill">
+          <select (change)="setSkill($any($event.target).value)" aria-label="Специализация чата">
+            <option value="" [selected]="!chat?.skill">Любая задача</option>
+            @for (s of skills; track s.id) { <option [value]="s.id" [selected]="s.id === chat?.skill">{{ s.label }}</option> }
+          </select>
+        </label>
+        <span class="grow"></span>
+        @if (chats.backendOnline() === true) {
+          <span class="hint ok" title="Модель выбирает каскад на бэкенде">● Бэкенд подключён</span>
+        } @else if (chats.backendOnline() === false) {
+          <span class="hint warn" title="Запустите backend/infinity-router — см. backend/README.md">Демо-режим: бэкенд не запущен</span>
+        } @else {
+          @if (nextModel(); as nm) {
+            <span class="hint">{{ nm.name }} · {{ usagePct(nm) }}% лимита</span>
+          } @else {
+            <span class="hint warn">Нет доступных моделей</span>
+          }
+        }
+        <button type="submit" class="btn primary icon-only" [disabled]="!draft().trim() || chats.typing()" aria-label="Отправить"><app-icon name="send" /></button>
+      </div>
+    </form>
+  </section>
+</div>

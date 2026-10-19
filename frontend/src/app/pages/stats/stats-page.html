@@ -1,0 +1,176 @@
+<section class="wrap">
+  <header class="page-head">
+    <div>
+      <h1>Статистика</h1>
+      <p class="sub">Дни на сайте и расход токенов{{ auth.user() ? ' · ' + auth.user()!.login : '' }}</p>
+    </div>
+    <button type="button" class="btn" (click)="load()" [disabled]="loading()"><app-icon name="refresh" />Обновить</button>
+  </header>
+
+  @if (data(); as d) {
+    <!-- главные цифры за сегодня -->
+    <div class="kpis">
+      <article class="kpi glass">
+        <span class="kl">Токенов сегодня</span>
+        <b class="kv">{{ fmt(d.used_today) }}</b>
+        <span class="ks">вход {{ fmt(todayStats()?.tokens_in ?? 0) }} · ответы {{ fmt(todayStats()?.tokens_out ?? 0) }}</span>
+      </article>
+
+      <article class="kpi glass">
+        <span class="kl">Осталось сегодня</span>
+        @if (budget(); as b) {
+          <b class="kv" [class.warnv]="b.pct >= 90">{{ fmt(b.left) }}</b>
+          <div class="bar" role="progressbar" [attr.aria-valuenow]="b.pct" aria-valuemin="0" aria-valuemax="100" aria-label="Израсходовано от дневного лимита">
+            <span [style.width.%]="b.pct" [class.hi]="b.pct >= 90"></span>
+          </div>
+          <span class="ks">из {{ fmt(b.limit) }} — ваш дневной лимит · <a routerLink="/settings">изменить</a></span>
+        } @else {
+          <b class="kv">Без лимита</b>
+          <span class="ks">
+            @if (d.left.tokens !== null) { по лимитам провайдеров: {{ fmt(d.left.tokens) }} токенов }
+            @else if (d.left.requests !== null) { по лимитам провайдеров: {{ fmt(d.left.requests) }} запросов }
+            @else { личный лимит можно задать в <a routerLink="/settings">«Настройках»</a> }
+          </span>
+        }
+      </article>
+
+      <article class="kpi glass">
+        <span class="kl">Запросов сегодня</span>
+        <b class="kv">{{ fmt(todayStats()?.requests ?? 0) }}</b>
+        <span class="ks">файлов: {{ todayStats()?.media ?? 0 }} · переключений модели: {{ todayStats()?.switches ?? 0 }}</span>
+      </article>
+
+      <article class="kpi glass">
+        <span class="kl">Дней подряд</span>
+        <b class="kv">{{ streak() }}</b>
+        <span class="ks">за год на сайте: {{ visitsYear() }} {{ visitsYear() % 10 === 1 && visitsYear() % 100 !== 11 ? 'день' : (visitsYear() % 10 >= 2 && visitsYear() % 10 <= 4 && (visitsYear() % 100 < 12 || visitsYear() % 100 > 14)) ? 'дня' : 'дней' }}</span>
+      </article>
+    </div>
+
+    <div class="cols">
+      <!-- календарь посещений -->
+      <section class="panel glass cal" aria-labelledby="cal-title">
+        <div class="pn-h">
+          <h2 id="cal-title"><app-icon name="calendar" />Дни посещений</h2>
+          <span class="muted small">за год: {{ fmt(tokensYear()) }} токенов</span>
+        </div>
+
+        <div class="scroll" #scroller>
+          <div class="heat" [style.--weeks]="grid().weeks">
+            <div class="months" aria-hidden="true">
+              @for (m of grid().months; track m.col) { <span [style.grid-column]="m.col + 1">{{ m.label }}</span> }
+            </div>
+            <div class="wdays" aria-hidden="true"><span>пн</span><span></span><span>ср</span><span></span><span>пт</span><span></span><span></span></div>
+            <div class="cells" role="grid" aria-label="Календарь посещений за год: стрелками можно выбрать день" (keydown)="onKey($event)" (mouseleave)="hover.set(null)">
+              @for (c of grid().cells; track c.key) {
+                <button type="button" class="c" [attr.data-l]="c.level" [attr.data-day]="c.key" [class.sel]="c.key === selected()"
+                        [class.today]="c.key === d.today" [attr.tabindex]="c.key === selected() ? 0 : -1" role="gridcell"
+                        [attr.aria-label]="cellLabel(c)" [attr.aria-selected]="c.key === selected()"
+                        (click)="pick(c)" (mouseenter)="showTip(c, $event)" (focus)="showTip(c, $event)" (blur)="hover.set(null)"></button>
+              }
+              @if (hover(); as h) {
+                <div class="tip" role="presentation" [style.left.px]="h.x" [style.top.px]="h.y">
+                  <b>{{ dateLabel(h.cell.key) }}</b>
+                  @if (h.cell.level) {
+                    <span>{{ fmt(tokens(h.cell.data)) }} токенов · запросов: {{ h.cell.data?.requests ?? 0 }}</span>
+                  } @else {
+                    <span>не заходил</span>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="legend">
+          <span class="lg"><i data-l="0"></i>не заходил</span>
+          <span class="lg">заходил:</span>
+          <span class="lg ramp"><small>меньше</small><i data-l="1"></i><i data-l="2"></i><i data-l="3"></i><i data-l="4"></i><small>больше токенов</small></span>
+        </div>
+      </section>
+
+      <!-- выбранный день -->
+      <aside class="panel glass day" aria-live="polite">
+        @if (selectedDay(); as s) {
+          <h2>{{ s.key === d.today ? 'Сегодня' : dateLabel(s.key, false) }}</h2>
+          <p class="muted small">{{ dateLabel(s.key) }}</p>
+          @if (s.data && (s.data.visited || s.data.requests)) {
+            <span class="st"><app-icon name="check" />Заходил на сайт</span>
+            <dl>
+              <div><dt>Токенов всего</dt><dd>{{ fmt(tokens(s.data)) }}</dd></div>
+              <div><dt>— в запросах</dt><dd>{{ fmt(s.data.tokens_in) }}</dd></div>
+              <div><dt>— в ответах</dt><dd>{{ fmt(s.data.tokens_out) }}</dd></div>
+              <div><dt>Запросов</dt><dd>{{ fmt(s.data.requests) }}</dd></div>
+              <div><dt>Картинок, аудио, видео</dt><dd>{{ fmt(s.data.media) }}</dd></div>
+              <div><dt>Переключений модели</dt><dd>{{ fmt(s.data.switches) }}</dd></div>
+            </dl>
+            @if (s.key === d.today && budget(); as b) {
+              <p class="muted small">Осталось из дневного лимита: <b>{{ fmt(b.left) }}</b> из {{ fmt(b.limit) }}</p>
+            }
+          } @else {
+            <span class="st off">Не заходил</span>
+            <p class="muted small">В этот день сайт не открывали.</p>
+          }
+        }
+      </aside>
+    </div>
+
+    <!-- остатки по лимитам провайдеров -->
+    <section class="panel glass" aria-labelledby="lim-title">
+      <div class="pn-h">
+        <h2 id="lim-title"><app-icon name="route" />Остатки по лимитам провайдеров на сегодня</h2>
+        <span class="muted small">суточные лимиты сбрасываются в {{ resetTime() }}</span>
+      </div>
+      @if (modelRows().length) {
+        <div class="tbl" role="table" aria-label="Остатки по моделям">
+          <div class="tr th" role="row">
+            <span role="columnheader">Модель</span><span role="columnheader">Запросы сегодня</span><span role="columnheader">Токены сегодня</span><span role="columnheader">Осталось</span>
+          </div>
+          @for (m of modelRows(); track m.id) {
+            <div class="tr" role="row">
+              <span role="cell" class="mname"><b>{{ m.label }}</b><small>{{ m.provider }} · {{ kindWord(m.kind) }}</small></span>
+              <span role="cell">{{ m.rpd ? fmt(m.req_day) + ' из ' + fmt(m.rpd) : m.rpmo ? fmt(m.req_month) + ' из ' + fmt(m.rpmo) + ' в месяц' : fmt(m.req_day) }}</span>
+              <span role="cell">{{ m.tpd ? fmt(m.tokens_day) + ' из ' + fmt(m.tpd) : fmt(m.tokens_day) }}</span>
+              <span role="cell" class="left">
+                <span class="bar" aria-hidden="true"><span [style.width.%]="modelPct(m)" [class.hi]="modelPct(m) >= 90"></span></span>
+                <small>
+                  @if (m.tpd) { {{ fmt(m.tpd > m.tokens_day ? m.tpd - m.tokens_day : 0) }} ток. }
+                  @if (m.rpd) { {{ fmt(m.rpd > m.req_day ? m.rpd - m.req_day : 0) }} запр. }
+                  @else if (m.rpmo) { {{ fmt(m.rpmo > m.req_month ? m.rpmo - m.req_month : 0) }} запр./мес }
+                </small>
+              </span>
+            </div>
+          }
+        </div>
+      } @else {
+        <p class="muted small">Нет подключённых моделей с известными лимитами. Добавьте ключи в <a routerLink="/settings">«Настройках»</a>.</p>
+      }
+    </section>
+
+    <!-- то же самое таблицей -->
+    <details class="panel glass list">
+      <summary>Все дни таблицей ({{ activeDays().length }})</summary>
+      @if (activeDays().length) {
+        <div class="tbl days" role="table" aria-label="Дни с активностью">
+          <div class="tr th" role="row"><span role="columnheader">Дата</span><span role="columnheader">Токены</span><span role="columnheader">Запросы</span><span role="columnheader">Файлы</span></div>
+          @for (x of activeDays(); track x.day) {
+            <div class="tr" role="row">
+              <span role="cell">{{ dateLabel(x.day, false) }}</span><span role="cell">{{ fmt(tokens(x)) }}</span>
+              <span role="cell">{{ fmt(x.requests) }}</span><span role="cell">{{ fmt(x.media) }}</span>
+            </div>
+          }
+        </div>
+      } @else {
+        <p class="muted small">Пока пусто.</p>
+      }
+    </details>
+  } @else if (failed()) {
+    <div class="panel glass empty">
+      <app-icon name="alert" />
+      <p>Не удалось загрузить статистику — бэкенд не отвечает.</p>
+      <button type="button" class="btn primary" (click)="load()">Попробовать ещё раз</button>
+    </div>
+  } @else {
+    <div class="panel glass empty"><p class="muted">Загружаю статистику…</p></div>
+  }
+</section>
